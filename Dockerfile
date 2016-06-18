@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:mainline-alpine
 RUN apt-get update && apt-get install -y tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone && \
