@@ -1,6 +1,5 @@
 FROM nginx:mainline-alpine
-RUN apt-get update && apt-get install -y tzdata && \
+RUN apk update && apk add tzdata && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo "Asia/Shanghai" > /etc/timezone && \
-    dpkg-reconfigure -f noninteractive tzdata
+    echo "Asia/Shanghai" > /etc/timezone 
 
